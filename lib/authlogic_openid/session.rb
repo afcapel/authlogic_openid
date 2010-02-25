@@ -104,7 +104,7 @@ module AuthlogicOpenid
                 end
               end
             else
-              errors.add(:openid_identifier, "did not match any users in our database, have you set up your account to use OpenID?")
+              errors.add(:openid_identifier, I18n.translate('authlogic.openid.identifier_not_found'))
             end
             return
           end
